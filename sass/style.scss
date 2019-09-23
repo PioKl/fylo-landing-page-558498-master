@@ -1,0 +1,1076 @@
+/*=====================
+       COLORS
+=======================*/
+
+// PRIMARY
+$softBlue: hsl(243, 86%, 85%);
+$darkBlue: hsl(243, 87%, 12%);
+
+// ACCENT
+$green: hsl(163, 95%, 43%);
+
+// NEUTRAL
+
+$lightGray: hsl(106, 0%, 98%);
+$gray: hsl(0, 0%, 50%);
+$darkGray: hsl(0, 0%, 17%);
+
+/*=====================
+       TYPOGRAPHY
+=======================*/
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+}
+
+body p {
+    color: $gray;
+}
+
+/*============================
+    WRAPPER DIV
+==============================*/
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "hero""main""footer";
+    // background: yellow;
+}
+
+/*===============================================================HERO=============================================================*/
+/*============================
+    HERO DIV
+==============================*/
+.hero {
+    grid-area: hero;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "header""heromain";
+
+    background: url(/images/bg-intro-desktop.svg);
+    background-size: 50% 100%;
+    background-position: right;
+    background-repeat: no-repeat;
+
+
+    /*============================
+        HERO__HEADER DIV
+    ==============================*/
+    &__header {
+        grid-area: header;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        grid-template-areas: "logo menu";
+        // background: yellow;
+        padding: 3rem 3rem 0 3rem;
+
+        /*============================
+            HERO__HEADER__LOGO DIV
+        ==============================*/
+        &__logo {
+            grid-area: logo;
+            justify-self: start;
+            // background: green;
+        }
+
+
+        /*============================
+            HERO__HEADER__MENU DIV
+        ==============================*/
+        &__menu {
+            grid-area: menu;
+            justify-self: end;
+            // background: darkcyan;
+
+            .menu-list {
+                list-style: none;
+                display: flex;
+            }
+
+            .menu-items {
+                padding: 0rem 1rem;
+            }
+
+            .menu-items-a {
+                text-decoration: none;
+                color: white;
+            }
+
+            .menu-signUp {
+                padding: .5rem 2rem;
+                background-color: $green;
+                -moz-border-radius: 4px;
+                -webkit-border-radius: 4px;
+                border-radius: 2px;
+                background: $green;
+            }
+
+            .menu-signUp:hover {
+                background-color: #5cbf2a;
+            }
+
+            .menu-signUp:active {
+                position: relative;
+                top: 1px;
+            }
+
+
+        }
+
+    }
+
+    /*============================
+        HERO__MAIN DIV
+    ==============================*/
+    &__main {
+        grid-area: heromain;
+        // background: blue;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        grid-template-areas: "info illustration";
+        padding: 3rem 3rem 0 3rem;
+
+        /*============================
+            HERO__MAIN__INFO DIV
+        ==============================*/
+        &__info {
+            grid-area: info;
+            padding-bottom: 3rem;
+            // background: orange;
+
+
+            .hero-info-h1 {
+                padding-top: 10%;
+                padding-right: 25%;
+                font-size: 2.5rem;
+                letter-spacing: 2px;
+            }
+
+            .hero-info-p {
+                padding-right: 28%;
+            }
+
+            .getStarted {
+                background-color: $green;
+                -moz-border-radius: 4px;
+                -webkit-border-radius: 4px;
+                border-radius: 4px;
+                // border: 1px solid #18ab29;
+                display: inline-block;
+                cursor: pointer;
+                color: #ffffff;
+                // font-family: Arial;
+                font-size: 17px;
+                padding: 16px 50px;
+                text-decoration: none;
+                text-shadow: 0px 1px 0px #2f6627;
+                font-weight: bold;
+            }
+
+            .getStarted:hover {
+                background-color: #5cbf2a;
+            }
+
+            .getStarted:active {
+                position: relative;
+                top: 1px;
+            }
+
+
+        }
+
+        /*==============================
+            HERO__MAIN__ILLUSTRATIOn DIV
+        =================================*/
+        &__illustration {
+            grid-area: illustration;
+            justify-self: end;
+            // background: purple;
+            padding-right: 5%;
+            padding-bottom: 3rem;
+
+            .illustration-main {
+                width: 100%;
+            }
+
+        }
+    }
+}
+
+/*===================================================================================================================*/
+
+/*===================================================MAIN================================================================*/
+
+/*==============================
+           MAIN DIV
+=================================*/
+.main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "infoTop""infoBottom""infoLast";
+
+    // clip-path: polygon(13% 0, 100% 23%, 88% 100%, 0 68%);
+    // background: grey;
+
+
+    /*==============================
+           MAIN__INFOTOP DIV
+    =================================*/
+    &__infoTop {
+        grid-area: infoTop;
+        padding: 10rem 3rem 10rem 3rem;
+        text-align: center;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: "topSentence""topPictures";
+
+        /*==============================
+           MAIN__INFOTOP__SENTENCE DIV
+        =================================*/
+        &__sentence {
+            grid-area: topSentence;
+            padding-bottom: 5rem;
+
+            .infoTop-sentence-p {
+                padding: 0 33%;
+            }
+        }
+
+
+        /*==============================
+           MAIN__INFOTOP__PICTURES DIV
+        =================================*/
+        &__pictures {
+            grid-area: topPictures;
+
+            &__container {
+                // display: flex;
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+                grid-gap: 100px;
+                // flex-wrap: wrap;
+                // justify-content: center;
+
+                .imageItem {
+                    padding: 0 1%;
+                }
+
+                .imageItemOne-h1 {
+                    padding: 3% 20% 0%;
+                    // // max-width: 50%;
+                    // // margin: 0 auto;
+                    // padding: 2.2% 0%;
+                }
+
+                .imageItemThree-h1 {
+                    padding-top: 7%;
+                }
+            }
+        }
+    }
+
+    /*==============================
+        MAIN__INFOBOTTOM DIV
+    =================================*/
+    &__infoBottom {
+        grid-area: infoBottom;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        grid-template-areas: "bottomSentence bottomPictures";
+        padding: 3rem 3rem 10rem 3rem;
+
+        /*==============================
+           MAIN__INFOBOTTOM__SENTENCE DIV
+        =================================*/
+        &__sentence {
+            grid-area: bottomSentence;
+            // padding-top: 40%;
+            place-self: center;
+
+            .infoBottom-sentence-h1 {
+                padding-right: 40%;
+            }
+
+            .infoBottom-sentence-p {
+                padding-right: 35%;
+            }
+        }
+
+
+        /*===============================
+           MAIN__INFOBOTTOM__PICTURES DIV
+        =================================*/
+        &__pictures {
+            grid-area: bottomPictures;
+
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            grid-template-areas: "topContainer""bottomContainer";
+
+            p {
+                color: black;
+            }
+
+
+            /*=============================================
+               MAIN__INFOBOTTOM__PICTURES__TOPCONTAINER DIV
+            ===============================================*/
+            &__topContainer {
+                grid-area: topContainer;
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+                // grid-template-columns: repeat(3, 1fr); jak chce zachowac te siatke, ale musze paddingi poprawic
+                grid-gap: 10px;
+                padding-bottom: 2%;
+
+
+                /*=============================================
+                                  ITEMTOP DIV
+                ===============================================*/
+                .itemTop {
+                    padding-top: 2rem;
+
+
+                    /*=============================================
+                                  ITEMTOP__HEADER DIV
+                    ===============================================*/
+                    &__header,
+                    .itemBottom__header {
+                        border: solid 1px white;
+                        border-radius: 3px;
+                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+
+                        padding: 2rem;
+                        margin-bottom: 4px;
+
+                        .topHeaderImg {
+                            width: 100%;
+                        }
+                    }
+
+
+                    /*=============================================
+                                  ITEMTOP__CONTENT DIV
+                    ===============================================*/
+                    &__content {
+                        border: solid 1px white;
+                        border-radius: 3px;
+                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+                        padding: 15px 10px;
+
+                        text-align: center;
+                    }
+
+                }
+
+                .topMiddle {
+                    padding-top: 0rem;
+                }
+
+            }
+
+            /*=============================================
+            MAIN__INFOBOTTOM__PICTURES__BOTTOMCONTAINER DIV
+            ===============================================*/
+            &__bottomContainer {
+                grid-area: bottomContainer;
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+                // grid-template-columns: repeat(3, 1fr); jak chce zachowac te siatke, ale musze paddingi poprawic
+                grid-gap: 10px;
+
+                /*=============================================
+                               ITEMBOTTOM DIV
+                ===============================================*/
+                .itemBottom {
+
+                    /*=============================================
+                               ITEMBOTTOM__HEADER DIV
+                    ===============================================*/
+                    &__header {
+                        border: solid 1px white;
+                        border-radius: 3px;
+                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+
+                        padding: 2rem;
+                        margin-bottom: 4px;
+
+
+                        .bottomHeaderImg {
+                            width: 100%;
+                        }
+                    }
+
+                    .bottomThirdHeader {
+                        padding: 4.1rem 2rem;
+                    }
+
+
+                    /*=============================================
+                               ITEMBOTTOM__CONTENT DIV
+                    ===============================================*/
+                    &__content {
+                        border: solid 1px white;
+                        border-radius: 3px;
+                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+                        padding: 15px 10px;
+
+                        text-align: center;
+                    }
+
+                }
+
+                .bottomMiddle {
+                    position: relative;
+                    bottom: 10%;
+                }
+            }
+
+        }
+    }
+
+    /*=============================================
+                   MAIN__INFOLAST DIV
+    ===============================================*/
+    &__infoLast {
+        grid-area: infoLast;
+        padding: 3rem 3rem 10rem 3rem;
+
+
+        /*=============================================
+                MAIN__INFOLAST__SENTENCE DIV
+        ===============================================*/
+        &__sentence {
+            text-align: center;
+
+            .infoLast-p {
+                padding: 2rem 27%;
+            }
+
+            .getStartedLast {
+                background-color: $green;
+                -moz-border-radius: 4px;
+                -webkit-border-radius: 4px;
+                border-radius: 4px;
+                // border: 1px solid #18ab29;
+                display: inline-block;
+                cursor: pointer;
+                color: #ffffff;
+                // font-family: Arial;
+                font-size: 17px;
+                padding: 16px 100px;
+                text-decoration: none;
+                text-shadow: 0px 1px 0px #2f6627;
+                font-weight: bold;
+            }
+
+            .getStartedLast:hover {
+                background-color: #5cbf2a;
+            }
+
+            .getStartedLast:active {
+                position: relative;
+                top: 1px;
+            }
+
+
+
+        }
+    }
+
+}
+
+/*===================================================================================================================*/
+
+/*===================================================================================================================
+                                                       FOOTER
+====================================================================================================================*/
+
+/*=========================================
+           FOOTER SAME VALUES
+=========================================*/
+.footer__header,
+.footer__main {
+    padding: 0rem 3rem 0 3rem;
+}
+
+.inputReceiveUpdate,
+.joinButton {
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    font-size: 17px;
+
+}
+
+// .inputReceiveUpdate {
+//     // padding-top: 10.5px;
+//     padding: 8.5px 100px;
+//     border: 1px solid white;
+//     outline: none;
+//     margin-right: 2%;
+// }
+
+// .joinButton {
+//     background-color: $green;
+//     // border: 1px solid $green;
+//     border: 0px;
+//     display: inline-block;
+//     cursor: pointer;
+//     color: #ffffff;
+//     // font-family: Arial;
+//     text-decoration: none;
+//     text-shadow: 0px 1px 0px #2f6627;
+//     font-weight: bold;
+//     padding: 10px 100px;
+// }
+
+// .joinButton:hover {
+//     background-color: #5cbf2a;
+// }
+
+// .joinButton:active {
+//     position: relative;
+//     top: 1px;
+// }
+
+
+/*==========================
+       FOOTER DIV
+==========================*/
+.footer {
+    grid-area: footer;
+    background: $darkBlue;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "footerHeader""footerMain";
+
+
+    /*==========================
+         FOOTER__HEADER DIV
+    ==========================*/
+    &__header {
+        grid-area: footerHeader;
+        padding-top: 5rem;
+
+        // .logoWhite {
+        //     filter: brightness(0) invert(1);
+        // }
+    }
+
+
+    /*==========================
+         FOOTER__MAIN DIV
+    ==========================*/
+    &__main {
+        grid-area: footerMain;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        grid-template-areas: "footerInfoUpdates footerInfoContact";
+        padding-bottom: 10rem;
+
+
+        /*==============================
+           FOOTER__MAIN__INFOUPDATES DIV
+        ================================*/
+        &__infoUpdates {
+            grid-area: footerInfoUpdates;
+
+            p {
+                color: white;
+                position: relative;
+            }
+
+            .footer-infoUpdates-p {
+                font-size: 18px;
+                padding-right: 25%;
+            }
+
+            .inputReceiveUpdate {
+                // padding-top: 10.5px;
+                padding: 8.5px 100px;
+                border: 1px solid white;
+                outline: none;
+                margin-right: 2%;
+                margin-bottom: 3%;
+            }
+
+            .joinButton {
+                background-color: $green;
+                // border: 1px solid $green;
+                border: 0px;
+                display: inline-block;
+                cursor: pointer;
+                color: #ffffff;
+                // font-family: Arial;
+                text-decoration: none;
+                text-shadow: 0px 1px 0px #2f6627;
+                font-weight: bold;
+                padding: 10px 100px;
+            }
+
+            .joinButton:hover {
+                background-color: #5cbf2a;
+            }
+
+            .joinButton:active {
+                position: relative;
+                top: 1px;
+            }
+
+            .icon {
+                position: relative;
+                top: 3px;
+                padding-right: 2%;
+            }
+        }
+
+
+        /*==============================
+           FOOTER__MAIN__INFOCONTACT DIV
+        ================================*/
+        &__infoContact {
+            grid-area: footerInfoContact;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto;
+            grid-template-areas: "footerFylo footerCompany footerSupport";
+
+            ul {
+                list-style: none;
+            }
+
+            li {
+                padding-bottom: 1rem;
+                color: $lightGray;
+            }
+
+            li:first-child {
+                font-weight: bold;
+                color: white;
+                padding-bottom: 1.5rem;
+            }
+
+            /*===================================
+             FOOTER__MAIN__INFOCONTACT__FYLO  DIV
+            =====================================*/
+            &__fylo {
+                grid-area: footerFylo;
+            }
+
+            /*=====================================
+             FOOTER__MAIN__INFOCONTACT__COMPANY DIV
+            =======================================*/
+            &__company {
+                grid-area: footerCompany;
+            }
+
+            /*=====================================
+             FOOTER__MAIN__INFOCONTACT__SUPPORT DIV
+            =======================================*/
+            &__support {
+                grid-area: footerSupport;
+            }
+        }
+    }
+
+}
+
+
+/*===================================================================================================================
+                                                  MEDIA QUERIES
+=====================================================================================================================*/
+
+@media only screen and (max-width: 1300px) {
+    .hero {
+        background-size: 58% 100%;
+    }
+
+    .main__infoTop__pictures__container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    body p {
+        font-size: 20px;
+    }
+
+    /*=========================================================HERO===================================================*/
+    .hero {
+        grid-area: hero;
+        background: white;
+
+
+        /*=============================================
+                   HERO__HEADER DIV
+        ===============================================*/
+        &__header {
+            grid-area: header;
+            background: url(/images/bg-intro-mobile.svg);
+            background-repeat: no-repeat;
+            background-position: right;
+            background-size: 55% 100%;
+
+            padding-bottom: 8.25rem;
+
+
+            /*=============================================
+                       HERO__HEADER__LOGO DIV
+            ===============================================*/
+            &__logo {
+                grid-area: logo;
+
+            }
+
+            /*=============================================
+                       HERO__HEADER__MENU DIV
+            ===============================================*/
+            &__menu {
+                grid-area: menu;
+            }
+
+        }
+
+
+        /*=============================================
+                         HERO__MAIN DIV
+        ===============================================*/
+        &__main {
+            grid-area: heromain;
+            grid-template-areas: "illustration illustration""info info";
+            padding-top: 0;
+
+
+            /*=============================================
+                         HERO__MAIN__INFO DIV
+            ===============================================*/
+            &__info {
+                grid-area: info;
+                text-align: center;
+
+
+                .hero-info-h1 {
+                    font-size: 2.5rem;
+                    margin: 0 auto;
+                    letter-spacing: 0px;
+                    padding: 10% 15% 0 15%;
+                }
+
+                .hero-info-p {
+                    color: $gray;
+                    padding-right: 0;
+                    padding: 0 15% 0 15%;
+                    font-size: 20px;
+                }
+            }
+
+            /*=============================================
+                    HERO__MAIN__ILLUSTRATION DIV
+            ===============================================*/
+            &__illustration {
+                grid-area: illustration;
+                justify-self: center;
+                padding: 0;
+
+            }
+
+
+        }
+
+
+    }
+
+    /*===========================================================MAIN===========================================================*/
+
+    /*=============================================
+                       MAIN DIV
+    ===============================================*/
+    .main {
+        grid-area: main;
+
+        .main__infoTop__pictures__container {
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-gap: 100px;
+        }
+
+
+        /*=============================================
+                    MAIN__INFOTOP DIV
+        ===============================================*/
+        &__infoTop {
+            grid-area: infoTop;
+
+            /*=============================================
+                    MAIN__INFOTOP__SENTENCE DIV
+            ===============================================*/
+            &__sentence {
+                grid-area: topSentence;
+
+                .infoTop-sentence-h1 {
+                    padding: 0 20%;
+                }
+
+                .infoTop-sentence-p {
+                    padding: 0 15%;
+                }
+            }
+
+
+            /*=============================================
+                    MAIN__INFOTOP__PICTURES DIV
+            ===============================================*/
+            &__pictures {
+                grid-area: topPictures;
+
+                /*=============================================
+                    MAIN__INFOTOP__PICTURES__CONTAINER DIV
+                ===============================================*/
+                &__container {
+
+                    .imageItemOne-h1 {
+                        padding: 10% 20% 0%;
+                    }
+
+                    .imageItemThree-h1 {
+                        padding-top: 0%;
+                    }
+
+                    .imageItem-h1 {
+                        padding-top: 10%;
+                    }
+                }
+            }
+        }
+
+
+        /*=============================================
+                     MAIN__INFOBOTTOM DIV
+        ===============================================*/
+        &__infoBottom {
+            grid-area: infoBottom;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: auto;
+            grid-template-areas: "bottomSentence bottomSentence""bottomPictures bottomPictures";
+            padding-bottom: 3rem;
+
+
+            /*=============================================
+                     MAIN__INFOBOTTOM__SENTENCE DIV
+            ===============================================*/
+            &__sentence {
+                grid-area: bottomSentence;
+                padding-top: 0%;
+                text-align: center;
+
+                .infoBottom-sentence-h1 {
+                    padding-right: 0%;
+                    padding: 0 15%;
+                }
+
+                .infoBottom-sentence-p {
+                    padding-right: 0%;
+                    padding: 0 15%;
+                }
+            }
+
+
+            /*=============================================
+                     MAIN__INFOBOTTOM__PICTURES DIV
+            ===============================================*/
+            &__pictures {
+                grid-area: bottomPictures;
+                padding-top: 2rem;
+
+
+                /*===============================================
+                     MAIN__INFOBOTTOM__PICTURES__TOPCONTAINER DIV
+                =================================================*/
+                &__topContainer {
+                    grid-area: topContainer;
+                    display: grid;
+                    grid-template-columns: repeat(auto-fill, minmax(200px, 300px));
+                    grid-gap: 50px;
+                    justify-self: center;
+                    padding-bottom: 50px;
+
+                    .itemTop {
+                        padding-top: 0rem;
+                    }
+                }
+
+
+                /*===============================================
+                  MAIN__INFOBOTTOM__PICTURES__BOTTOMCONTAINER DIV
+                =================================================*/
+                &__bottomContainer {
+                    grid-area: bottomContainer;
+                    display: grid;
+                    grid-template-columns: repeat(auto-fill, minmax(200px, 300px));
+                    grid-gap: 50px;
+                    justify-self: center;
+
+
+                    .bottomMiddle {
+                        position: static;
+                    }
+                }
+            }
+        }
+
+        /*===============================================
+                       MAIN__INFOLAST DIV
+        =================================================*/
+        &__infoLast {
+            grid-area: infoLast;
+
+            /*===============================================
+                      MAIN__INFOLAST__SENTENCE DIV
+            =================================================*/
+            &__sentence {
+                .infoLast-p {
+                    padding: 1rem 15%;
+                }
+            }
+        }
+    }
+
+    /*=========================================================================================================================*/
+
+    /*===================================================FOOTER===============================================================*/
+
+
+    /*=====================
+          FOOTER DIV
+    =======================*/
+    .footer {
+        grid-area: footer;
+
+
+        /*=====================
+          FOOTER__HEADER DIV
+        =======================*/
+        &__header {
+            grid-area: footerHeader;
+        }
+
+        /*=====================
+          FOOTER__MAIN DIV
+        =======================*/
+        &__main {
+            grid-area: footerMain;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            grid-template-areas: "footerInfoUpdates""footerInfoContact";
+
+
+            /*============================
+             FOOTER__MAIN__INFOUPDATES DIV
+            ==============================*/
+            &__infoUpdates {
+                grid-area: footerInfoUpdates;
+
+
+                .receiveUpdates-form {
+                    display: flex;
+                    flex-flow: row wrap;
+                    justify-content: flex-end;
+                    padding-right: 26%;
+                    padding-bottom: 5%;
+                }
+
+                .inputReceiveUpdate {
+                    margin-right: 0%;
+                    width: 100%;
+                    margin-bottom: 0%;
+                }
+
+                .joinButton {
+                    margin-top: 3%;
+                    // margin-left: 28.5%;
+                    // margin-bottom: 3%;
+                    // position: relative;
+                    // left: 27.5%;
+                    // // float: right;
+
+                }
+            }
+
+            /*============================
+             FOOTER__MAIN__INFOCONTACT DIV
+            ==============================*/
+            &__infoContact {
+                grid-area: footerInfoContact;
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+                grid-template-areas: "footerFylo""footerCompany""footerSupport";
+
+                ul {
+                    padding-left: 0;
+                }
+
+
+                /*===================================
+                  FOOTER__MAIN__INFOCONTACT__FYLO DIV
+                =====================================*/
+                &__fylo {
+                    grid-area: footerFylo;
+                }
+
+                /*=======================================
+                  FOOTER__MAIN__INFOCONTACT__COMPANY DIV
+                ========================================*/
+                &__company {
+                    grid-area: footerCompany;
+                }
+
+                /*======================================
+                  FOOTER__MAIN__INFOCONTACT__SUPPORT DIV
+                ========================================*/
+                &__support {
+                    grid-area: footerSupport;
+                }
+            }
+        }
+
+    }
+
+}
+
+// @media only screen and (max-width: 766px) {
+
+//     .footer__main__infoUpdates {
+//         .joinButton {
+//             position: static;
+
+//         }
+//     }
+
+// }
